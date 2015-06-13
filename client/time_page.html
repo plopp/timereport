@@ -1,0 +1,13 @@
+<template name="timePage">
+	<div class="container-fluid  mainmenu">
+		<div class="row">
+			{{#each timerange}}
+			<div class="col-md-4 trbutton" id="timeBut{{this}}" value={{this}}>
+				<div class="glyphdiv">
+					<span class="timespan">{{this}}</span>
+				</div>
+		  	</div>
+		  	{{/each}}
+		</div>
+	</div>
+</template>

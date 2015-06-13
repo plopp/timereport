@@ -1,0 +1,14 @@
+<template name="projectPage">
+	<div class="container-fluid  mainmenu">
+		<div class="row">
+			{{#each project}}
+			<div class="col-md-4 trbutton" value="{{title}}">
+				<div class="glyphdiv">
+					<span class="timespan">{{number}}</span>
+					<span class="timespan">{{title}}</span>
+				</div>
+		  	</div>
+		  	{{/each}}
+		</div>
+	</div>
+</template>
