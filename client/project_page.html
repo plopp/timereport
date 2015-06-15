@@ -1,14 +1,19 @@
 <template name="projectPage">
 	<div class="container-fluid  mainmenu">
 		<div class="row">
-			{{#each project}}
-			<div class="col-md-4 trbutton" value="{{title}}">
-				<div class="glyphdiv">
-					<span class="timespan">{{number}}</span>
-					<span class="timespan">{{title}}</span>
+			{{#each projects}}
+			<div class="col-md-2 trbutton" value="{{_id}}">
+				<div class="projectdiv" style="text-align:center;font-weight:bold;font-size: 20pt;line-height:80px;vertical-align:middle">
+					<span class="timespan">{{number}}</span><br>
+					<span class="timespan">{{title}} ({{rate}})</span>
 				</div>
 		  	</div>
 		  	{{/each}}
+		  	<div class="col-md-2 trbutton" value="addProjectBut" style="text-align:center;font-weight:bold;font-size: 60pt;line-height:150px;vertical-align:middle">
+				<div class="projectdiv">
+					<span class="timespan">+</span>
+				</div>
+		  	</div>
 		</div>
 	</div>
 </template>

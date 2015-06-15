@@ -5,7 +5,9 @@
 # but you can also edit it by hand.
 
 meteor-platform
-autopublish
 insecure
 iron:router
 mrt:bootstrap-3
+sacha:spin
+rzymek:moment-locale-sv
+sgi:sprintfjs

@@ -11,16 +11,33 @@
   margin: 10px;
   line-height: 1.42857143;
   height: 200px;
-  width: 200px;
   background-color: rgba(162, 222, 208,1.0);
   border-radius: 16px;
-	  -webkit-transition: border .05s ease-in-out;
-	  -o-transition: border .05s ease-in-out;
-	  transition: border .05s ease-in-out;
+  -webkit-transition: border .05s ease-in-out;
+  -o-transition: border .05s ease-in-out;
+  transition: border .05s ease-in-out;
   border: 3px solid rgba(22, 160, 133,1.0);
-  	-webkit-box-shadow: 10px 10px 19px -3px rgba(0,0,0,0.25);
-  	-moz-box-shadow: 10px 10px 19px -3px rgba(0,0,0,0.25);
-	box-shadow: 10px 10px 19px -3px rgba(0,0,0,0.25);
+  -webkit-box-shadow: 10px 10px 19px -3px rgba(0,0,0,0.25);
+  -moz-box-shadow: 10px 10px 19px -3px rgba(0,0,0,0.25);
+  box-shadow: 10px 10px 19px -3px rgba(0,0,0,0.25);
+}
+
+.trbutton-half {
+  display: block;
+  opacity: 0.8;
+  padding: 0px;
+  line-height: 1.42857143;
+  height: 50px;
+  background-color: rgba(162, 222, 208,1.0);
+  border-radius: 6px;
+  -webkit-transition: border .05s ease-in-out;
+  -o-transition: border .05s ease-in-out;
+  transition: border .05s ease-in-out;
+  border: 3px solid rgba(22, 160, 133,1.0);
+  -webkit-box-shadow: 10px 10px 19px -3px rgba(0,0,0,0.25);
+  -moz-box-shadow: 10px 10px 19px -3px rgba(0,0,0,0.25);
+  box-shadow: 10px 10px 19px -3px rgba(0,0,0,0.25);
+  margin-top: 5px;
 }
 
 .highlight {
@@ -34,6 +51,10 @@
 
 body {
 	background-color: rgba(104, 195, 163,1.0);
+}
+
+.tablecolor {
+	background-color: rgba(162, 222, 208,1.0);
 }
 
 .labeldiv {
@@ -56,6 +77,14 @@ body {
 	top: 14px;
 	text-align: center;
 	font-size: 96px;
+}
+
+.glyphdivsmall {
+	position:relative;
+	width: 100%;
+	top: 0px;
+	text-align: center;
+	font-size: 24px;
 }
 
 .label {

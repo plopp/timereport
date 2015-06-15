@@ -1,10 +1,10 @@
-Template.timePage.helpers({
+Template.timeEditPage.helpers({
 	timerange : function() {
 		return [0,0.5,1,2,3,4,5,6,7,8];
 	}
 });
 
-Template.timePage.events({
+Template.timeEditPage.events({
 	"mouseenter .trbutton" : function(event){
 		$(event.currentTarget).addClass("highlight");
 		$(event.currentTarget).removeClass("nonhighlight");
@@ -19,8 +19,13 @@ Template.timePage.events({
 			Router.go("/");
 		}else{
 			var value = $(event.currentTarget)[0].attributes.value["value"];
-			Session.set("time",parseFloat(value));
-			Router.go("/project");
+			var timepostId = $(timepostid)[0].attributes.value["value"];
+			Timeposts.update(timepostId,{$set:{hours:parseFloat(value)}});
+			Router.go('/');
 		}
 	}
 });
+
+Template.timeEditPage.rendered = function(){
+	
+}

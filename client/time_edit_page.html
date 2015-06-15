@@ -1,8 +1,10 @@
-<template name="timePage">
-	<div class="container-fluid  mainmenu">
+<template name="timeEditPage">
+	<div class="container-fluid mainmenu">
+	<h1>Editing timepost: </h1>
+		<div hidden=true id="timepostid" value={{timepost._id}}></div>
 		<div class="row">
 			{{#each timerange}}
-			<div class="col-md-2 trbutton" id="timeBut{{this}}" value={{this}}>
+			<div class="col-md-2 trbutton" value={{this}}>
 				<div class="glyphdiv">
 					<span class="timespan">{{this}}</span>
 				</div>
