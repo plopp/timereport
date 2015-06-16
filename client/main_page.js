@@ -8,13 +8,12 @@ Template.mainPage.helpers({
 	timepostsThisWeekPerProject : function(){
 		var startOfWeek = moment(Session.get("globalDay")).startOf('week').unix()*1000;
 		var endOfWeek = moment(Session.get("globalDay")).endOf('week').unix()*1000;
-
 		var projarr = Projects.find().fetch();
 		var returnarr = [];
 		projarr.forEach(function(o,i){
 			var timearr = Timeposts.find({
 				timestamp:{
-					$gt: startOfWeek,
+					$gte: startOfWeek,
 					$lt: endOfWeek
 				},
 				project: o._id
@@ -41,7 +40,7 @@ Template.mainPage.helpers({
 		var endOfWeek = moment(Session.get("globalDay")).endOf('week').unix()*1000;
 		var timecursor = Timeposts.find({
 			timestamp:{
-				$gt: startOfWeek,
+				$gte: startOfWeek,
 				$lt: endOfWeek
 			}
 		});
@@ -73,7 +72,7 @@ Template.mainPage.helpers({
 		var endOfWeek = moment(Session.get("globalDay")).endOf('week').unix()*1000;
 		var timecursor = Timeposts.find({
 			timestamp:{
-				$gt: startOfWeek,
+				$gte: startOfWeek,
 				$lt: endOfWeek
 			}
 		}).fetch();
@@ -88,7 +87,7 @@ Template.mainPage.helpers({
 		var endOfWeek = moment(Session.get("globalDay")).endOf('week').unix()*1000;
 		var timecursor = Timeposts.find({
 			timestamp:{
-				$gt: startOfWeek,
+				$gte: startOfWeek,
 				$lt: endOfWeek
 			},
 			internal: true
@@ -104,7 +103,7 @@ Template.mainPage.helpers({
 		var endOfWeek = moment(Session.get("globalDay")).endOf('week').unix()*1000;
 		var timecursor = Timeposts.find({
 			timestamp:{
-				$gt: startOfWeek,
+				$gte: startOfWeek,
 				$lt: endOfWeek
 			},
 			internal: false
@@ -127,7 +126,7 @@ Template.mainPage.helpers({
 		projects.forEach(function(o,i){
 			var times = Timeposts.find({
 				timestamp:{
-					$gt: startOfWeek,
+					$gte: startOfWeek,
 					$lt: endOfWeek
 				},
 				project: o._id

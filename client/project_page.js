@@ -23,13 +23,14 @@ Template.projectPage.events({
 		}
 		else{
 			var timestamp = new Date(Session.get("globalDay")).getTime();
-			Timeposts.insert({
+			var result = Timeposts.insert({
 		        project: projId,
 		        hours: time,
 		        timestamp: timestamp,
 		        week: moment(timestamp).week(),
 	        	dayofweek: moment(timestamp).weekday(), 
 		    });
+		    console.log(result);
 			Session.set("time",undefined);
 			Router.go("/");
 		}

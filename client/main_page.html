@@ -1,91 +1,103 @@
 <template name="mainPage">
+	<nav class="navbar navbar-default" style="margin: 15px">
+	  <div class="container-fluid">
+	    <div class="navbar-header">
+	      <a class="navbar-brand" href="#">
+	        <!-- <img alt="Brand" src="..."> -->
+	        TimeReport
+	      </a>
+	    </div>
+	  </div>
+	</nav>
 	<div class="container-fluid  mainmenu">
 		<div class="row">
-			<div class="col-md-1" style="height:100px"></div>
-			<div class="col-md-1" style="height:100px"></div>
-			<div class="col-md-1 trbutton" id="prevweek" style="height:100px">
-			  	<div class="labeldiv">
-			  		<span class="label">week</span>
-			  	</div>
-			  	<div class="glyphdivsmall">
-			  		<span class="glyphicon glyphicon-chevron-left"></span>
-			  		<span class="glyphicon glyphicon-chevron-left"></span>
-			  	</div>
-			</div>
-			<div class="col-md-1 trbutton" id="prevday" style="height:100px">
-			  	<div class="labeldiv">
-			  		<span class="label">day</span>
-			  	</div>
-			  	<div class="glyphdivsmall">
-			  		<span class="glyphicon glyphicon-chevron-left"></span>
-			  	</div>
-			</div>
-			<div class="col-md-1" style="height:100px">
-				<div style="height:50px;color:#fff;background-color:#000;margin-top:10px;border-radius: 5px; text-align: center;padding: 5px">
-						{{globalDay}} {{globalMonth}}<br>Week: {{globalWeek}}
-				</div>
-				<div class="trbutton-half" id="today">
-				  	<div class="labeldiv">
-				  		<span class="label">today</span>
+			<div class="col-md-2" id="prevweek" style="">
+			  	<div class="btn btn-default btn-full-width">
+			  		<span class="">week</span>
+			  		<div class="glyphdivsmall">
+				  		<span class="glyphicon glyphicon-fast-backward"></span>
 				  	</div>
+			  	</div>
+			</div>
+			<div class="col-md-2" id="prevday" style="">
+			  	<div class="btn btn-default btn-full-width">
+			  		<span class="">day</span>
+			  		<div class="glyphdivsmall">
+				  		<span class="glyphicon glyphicon-backward"></span>
+				  	</div>
+			  	</div>
+			</div>
+			<div class="col-md-4" style="">
+				<div class="" style="height:40px;color:#fff;background-color:#000;margin-top:10px;border-radius: 5px; text-align: center;padding: 5px;font-size: 14pt;width:100%;margin-bottom:0px">
+						{{globalDay}} {{globalMonth}} (week: {{globalWeek}})
+				</div>
+				<div class="btn btn-default btn-full-width" id="today">
+					Today
+				  	<!-- <div class="labeldiv"> -->
+				  		<!-- <span class="btn btn-default">today</span> -->
+				  	<!-- </div> -->
 				</div>
 			</div>
-			<div class="col-md-1 trbutton" id="nextday" style="height:100px">
-			  	<div class="labeldiv">
-			  		<span class="label">day</span>
-			  	</div>
-			  	<div class="glyphdivsmall">
-			  		<span class="glyphicon glyphicon-chevron-right"></span>
+			<div class="col-md-2" id="nextday" style="">
+			  	<div class=" btn btn-default btn-full-width">
+			  		<span class="">day</span>
+			  		<div class="glyphdivsmall">
+				  		<span class="glyphicon glyphicon-forward"></span>
+				  	</div>
 			  	</div>
 			</div>
-			<div class="col-md-1 trbutton" id="nextweek" style="height:100px">
-			  	<div class="labeldiv">
-			  		<span class="label">week</span>
-			  	</div>
-			  	<div class="glyphdivsmall">
-			  		<span class="glyphicon glyphicon-chevron-right"></span>
-			  		<span class="glyphicon glyphicon-chevron-right"></span>
+			<div class="col-md-2" id="nextweek" style="">
+			  	<div class=" btn btn-default btn-full-width">
+			  		<span class="">week</span>
+			  		<div class="glyphdivsmall">
+				  		<span class="glyphicon glyphicon-fast-forward"></span>
+				  	</div>
 			  	</div>
 			</div>
 		</div>
+		<hr>
 		<div class="row">
-			<div class="col-md-3 trbutton" id="but1">
-				<div class="labeldiv">
-					<span class="label">Time</span>
-				</div>
-				<div class="glyphdiv">
-					<span class="glyphicon glyphicon-time"></span>
+			<div class="col-md-4" id="but1">
+				<div class="btn btn-default btn-full-width">
+					<span class="">Time</span>
+					<div class="glyphdiv">
+						<span class="glyphicon glyphicon-time"></span>
+					</div>
 				</div>
 		  	</div>
-		  	<div class="col-md-3 trbutton" id="but2">
-		  		<div class="labeldiv">
-		  			<span class="label">Travel</span>
-		  		</div>
-		  		<div class="glyphdiv">
-		  			<span class="glyphicon glyphicon-plane"></span>
+		  	<div class="col-md-4" id="but2">
+		  		<div class=" btn btn-default btn-full-width">
+		  			<span class="">Travel</span>
+		  			<div class="glyphdiv">
+			  			<span class="glyphicon glyphicon-plane"></span>
+			  		</div>
 		  		</div>
 		  	</div>
-		  	<div class="col-md-3 trbutton" id="but3">
-		  		<div class="labeldiv">
-		  			<span class="label">Expenditure</span>
-		  		</div>
-		  		<div class="glyphdiv">
-		  			<span class="glyphicon glyphicon-euro"></span>
+		  	<div class="col-md-4" id="but3">
+		  		<div class="btn btn-default btn-full-width">
+		  			<span class="">Expenditure</span>
+		  			<div class="glyphdiv">
+			  			<span class="glyphicon glyphicon-euro"></span>
+			  		</div>
 		  		</div>
 		  	</div>
 		</div>
+		<hr>
 		<div class="row">
 			<div class="col-md-12">
 				<div class="panel panel-default">
 				<!-- Default panel contents -->
 					<div class="panel-heading">Timecard - Week {{globalWeek}}</div>
 					<div class="panel-body">
-						Total hours this week: {{hoursThisWeek}}<br>
-						Rate of external work: {{utilization}} %
-						<hr>
+						<div style="float:left">
+							Total hours this week: {{hoursThisWeek}}<br>
+							Rate of external work: {{utilization}} %
+						</div>
+						<div style="float:right">
 						Change list view:
-						<button class="btn btn-default" id="butPerProject">Per project</button>
-						<button class="btn btn-default" id="butPerPost">Per post</button>
+							<button class="btn btn-default" id="butPerProject">Per project</button>
+							<button class="btn btn-default" id="butPerPost">Per post</button>
+						</div>
 					</div>
 
 					<!-- Table -->

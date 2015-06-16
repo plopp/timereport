@@ -9,11 +9,13 @@ Template.addProjectPage.events({
 		var rateA = $("#rateA").prop("checked");
 		var rateB = $("#rateB").prop("checked");
 		var rateC = $("#rateC").prop("checked");
+		var internal = $("#internal").prop("checked");
 		console.log("Project name: ",projName);
 		console.log("Project #: ",projNum);
 		console.log("RateA ",rateA);
 		console.log("RateB ",rateB);
 		console.log("RateC ",rateC);
+		console.log("Internal ",internal);
 		var rate = "C";
 		if(rateA){
 			rate = "A";
@@ -27,7 +29,8 @@ Template.addProjectPage.events({
 		Projects.insert({
 	        title: projName,
 	        number: projNum,
-	        rate: rate
+	        rate: rate,
+	        internal: internal
 	    });
 	    Router.go("/project");
 	}

@@ -50,7 +50,10 @@
 }
 
 body {
-	background-color: rgba(104, 195, 163,1.0);
+	/*background-color: rgba(104, 195, 163,1.0);*/
+	background-position: left top;
+    background-image: url(img/green.jpg);
+    background-repeat: no-repeat;
 }
 
 .tablecolor {
@@ -58,17 +61,20 @@ body {
 }
 
 .labeldiv {
-	width: 100%;
+	/*width: 100%;*/
 	text-align: center;
 	vertical-align: middle;
-	line-height: 40px
+	line-height: 40px;
+	/*font-size: 16px;*/
+	margin: 5px 5px 5px 5px;
 }
 
 .labeldiv span {
 	width: 100%;
 	text-align: center;
 	vertical-align: middle;
-	line-height: 50px
+	line-height: 50px;
+	font-size: 16px;
 }
 
 .glyphdiv {
@@ -84,11 +90,17 @@ body {
 	width: 100%;
 	top: 0px;
 	text-align: center;
-	font-size: 24px;
+	font-size: 36px;
 }
 
 .label {
 	font-weight: bold;
 	font-size: 18pt;
 	color:rgba(22, 160, 133,1.0);
+}
+
+.btn-full-width {
+	width: 100%;
+	margin-top: 10px;
+	margin-bottom: 10px;
 }
